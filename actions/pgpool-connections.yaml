@@ -16,7 +16,7 @@ parameters:
     description: "Command to run"
     type: string
     immutable: true
-    default: "/usr/bin/ansible-playbook {{hosts}} /etc/ansible/playbooks/pgpool-status.yml"
+    default: "/usr/bin/ansible-playbook /etc/ansible/playbooks/pgpool-status.yml -l {{hosts}}"
   hosts:
     description: "Ansible hosts to ask pgpool on"
     type: string
