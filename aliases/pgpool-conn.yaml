@@ -1,0 +1,6 @@
+---
+name: chatops.ansible_pgpool_conn
+action_ref: ansible-hubot-rnimu.pgpool_conn
+description: Show number of connections in pgpool
+formats:
+- "pgpool.conn {{hosts}}"

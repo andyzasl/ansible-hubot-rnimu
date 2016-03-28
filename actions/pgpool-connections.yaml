@@ -1,0 +1,23 @@
+---
+name: pgpool-conn
+description: Show server status by running ansible ping ad-hoc command
+runner_type: local-shell-cmd
+entry_point: ""
+enabled: true
+parameters:
+  sudo:
+    description: "Run command with sudo"
+    type: boolean
+    immutable: true
+    default: true
+  kwarg_op:
+    immutable: true
+  cmd:
+    description: "Command to run"
+    type: string
+    immutable: true
+    default: "/usr/bin/ansible-playbook {{hosts}} /etc/ansible/playbooks/pgpool-status.yml"
+  hosts:
+    description: "Ansible hosts to ask pgpool on"
+    type: string
+    required: true
