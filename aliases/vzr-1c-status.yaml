@@ -1,0 +1,6 @@
+---
+name: chatops.ansible_vzr_1c_status
+action_ref: ansible-hubot-rnimu.vzr_1c_status
+description: Check of 1C VZR services
+formats:
+- "vzr_1c_status"

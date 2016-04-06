@@ -1,0 +1,6 @@
+---
+name: chatops.ansible_vzr_1c_restart
+action_ref: ansible-hubot-rnimu.vzr_1c_restart
+description: Restart of 1C VZR services
+formats:
+- "vzr_1c_restart"

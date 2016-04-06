@@ -1,0 +1,6 @@
+---
+name: chatops.rbl_checl
+action_ref: ansible-hubot-rnimu.rbl_check
+description: Check IP over DNS Blacklist servers
+formats:
+- "rblcheck {{hosts}}"

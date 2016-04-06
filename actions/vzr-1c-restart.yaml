@@ -1,5 +1,5 @@
 ---
-name: pgpool_conn
+name: vzr_1c_restart
 description: Show server status by running ansible ping ad-hoc command
 runner_type: local-shell-cmd
 entry_point: ""
@@ -12,12 +12,15 @@ parameters:
     default: true
   kwarg_op:
     immutable: true
+  timeout:
+    type: integer
+    default: 180
   cmd:
     description: "Command to run"
     type: string
     immutable: true
-    default: "cd /home/ansible/rnimu; /usr/bin/ansible-playbook playbooks/pgpool-status.yml -l {{hosts}}"
+    default: "cd /home/ansible/vzr; /usr/bin/ansible-playbook playbooks/1c-restart.yaml"
   hosts:
     description: "Ansible hosts to ask pgpool on"
     type: string
-    required: true
+    required: false

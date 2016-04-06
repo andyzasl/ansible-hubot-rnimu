@@ -1,5 +1,5 @@
 ---
-name: pgpool_conn
+name: rbl_check
 description: Show server status by running ansible ping ad-hoc command
 runner_type: local-shell-cmd
 entry_point: ""
@@ -9,15 +9,15 @@ parameters:
     description: "Run command with sudo"
     type: boolean
     immutable: true
-    default: true
+    default: false
   kwarg_op:
     immutable: true
   cmd:
     description: "Command to run"
     type: string
     immutable: true
-    default: "cd /home/ansible/rnimu; /usr/bin/ansible-playbook playbooks/pgpool-status.yml -l {{hosts}}"
+    default: "/home/ansible/tools/rbl/rblcheck.sh {{hosts}}"
   hosts:
-    description: "Ansible hosts to ask pgpool on"
+    description: "Ansible hosts to ping"
     type: string
     required: true
